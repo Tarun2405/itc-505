@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SVG Emoji Animation Example</title>
+    <style>
+        /* Scale up emoji on hover */
+        .emoji {
+            transition: transform 0.5s;
+        }
+        .emoji:hover {
+            transform: scale(1.5); /* Make it larger on hover */
+        }
+
+        /* Make the second emoji bounce */
+        @keyframes bounce {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-20px); }
+        }
+
+        .bounce {
+            animation: bounce 1s infinite; /* Bounces up and down */
+        }
+    </style>
+</head>
+<body>
+    <svg width="300" height="300">
+        <!-- Emoji 1 (smiley face) -->
+        <text x="50" y="100" font-size="60" class="emoji">😀</text>
+        <!-- Emoji 2 (heart) -->
+        <text x="150" y="100" font-size="60" class="bounce">❤️</text>
+    </svg>
+</body>
+</html>
